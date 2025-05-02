@@ -1,12 +1,10 @@
-﻿using Viceri.SuperHero.Api.Infrastructure;
-using Viceri.SuperHero.Api.Entity;
+﻿using Viceri.SuperHero.Api.Entity;
+using Viceri.SuperHero.Api.Interface;
+using Viceri.SuperHero.Api.Infrastructure;
 
 namespace Viceri.SuperHero.Api.Repository
 {
-    public class PowerRepository : BaseRepository<Power>
+    public class PowerRepository(AppDbContext appDbContext) : BaseRepository<Power>(appDbContext), IPowerRepository
     {
-        public PowerRepository(AppDbContext appDbContext) : base(appDbContext)
-        {
-        }
     }
 }

@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Viceri.SuperHero.Api.Infrastructure;
+﻿using System.Linq.Expressions;
 using Viceri.SuperHero.Api.Entity;
-using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
+using Viceri.SuperHero.Api.Interface;
+using Viceri.SuperHero.Api.Infrastructure;
 
 namespace Viceri.SuperHero.Api.Repository
 {
-    public class BaseRepository<TEntity>where TEntity : BaseEntity
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity
     {
         protected AppDbContext Context { get; set; }  
         protected DbSet<TEntity> DbSet { get; set; }
