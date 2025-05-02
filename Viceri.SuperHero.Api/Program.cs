@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Viceri.SuperHero.Api.Data;
+using Viceri.SuperHero.Api.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

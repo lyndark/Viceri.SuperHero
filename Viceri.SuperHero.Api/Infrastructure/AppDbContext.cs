@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Viceri.SuperHero.Api.Entity;
 
-namespace Viceri.SuperHero.Api.Data
+namespace Viceri.SuperHero.Api.Infrastructure
 {
     public class AppDbContext : DbContext
     {
