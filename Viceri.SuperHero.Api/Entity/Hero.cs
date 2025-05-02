@@ -2,7 +2,7 @@
 
 namespace Viceri.SuperHero.Api.Entity
 {
-    public class SuperHero : BaseEntity
+    public class Hero : BaseEntity
     {
         [Required]
         [MaxLength(120)] 
@@ -21,6 +21,6 @@ namespace Viceri.SuperHero.Api.Entity
         [Required] 
         public double Weight { get; set; } 
 
-        public ICollection<Superpowers> Superpowers { get; set; } = new List<Superpowers>();
+        public ICollection<Power> Powers { get; set; } = new List<Power>();
     }
 }

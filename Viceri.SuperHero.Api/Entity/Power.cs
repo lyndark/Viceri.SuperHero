@@ -2,7 +2,7 @@
 
 namespace Viceri.SuperHero.Api.Entity
 {
-    public class Superpowers : BaseEntity
+    public class Power : BaseEntity
     {
         [Required]
         [MaxLength(50)] 
@@ -11,6 +11,6 @@ namespace Viceri.SuperHero.Api.Entity
         [MaxLength(250)] 
         public string? Description { get; set; }
 
-        public ICollection<SuperHero> SuperHeroes { get; set; } = new List<SuperHero>();
+        public ICollection<Hero> Heroes { get; set; } = new List<Hero>();
     }
 }
