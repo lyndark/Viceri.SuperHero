@@ -5,3 +5,5 @@
 /.vs
 /Viceri.SuperHero.Api/obj/Debug/net8.0
 /Viceri.SuperHero.Api/obj
+/Viceri.SuperHero.Front/.vs
+/Viceri.SuperHero.Front/.vscode
