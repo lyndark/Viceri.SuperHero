@@ -7,7 +7,7 @@ namespace Viceri.SuperHero.Api.Interface
     {
         Task SaveChanges();
         Task<bool> Exist(Expression<Func<TEntity, bool>> filter);
-        Task<TEntity> GetById(int id);
+        Task<TEntity> GetById(int id, bool asTracking = false);
         Task<List<TEntity>> GetAll();
         Task Insert(TEntity entity);
         Task Update(TEntity entity);

@@ -27,9 +27,11 @@ namespace Viceri.SuperHero.Api.Repository
             return await DbSet.AnyAsync(filter);
         }
 
-        public async Task<TEntity> GetById(int id)
+        public async Task<TEntity> GetById(int id, bool asTracking = false)
         {
-            return await DbSet.FirstAsync(x => x.Id == id);
+            return asTracking ? 
+                await DbSet.AsTracking().FirstAsync(x => x.Id == id):
+                await DbSet.AsNoTracking().FirstAsync(x => x.Id == id);
         }
 
         public async Task<List <TEntity>> GetAll()
